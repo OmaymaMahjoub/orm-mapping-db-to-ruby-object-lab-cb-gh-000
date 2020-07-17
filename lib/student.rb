@@ -40,7 +40,7 @@ class Student
     arr=DB[:conn].execute(sql)
     arr.collect do |row|
       Student.new_from_db(row)
-    end.firsr
+    end.first
   end
 
   def self.all_students_in_grade_X(number)
